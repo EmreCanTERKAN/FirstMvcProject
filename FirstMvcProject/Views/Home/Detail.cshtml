@@ -1,0 +1,17 @@
+﻿@model ProductViewModel
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>@Model.Product.Name</h1>
+<span>@Model.Product.Price</span>
+<span>@Model.IsInStock</span>
+
+<ul>
+@foreach (var review in Model.Review)
+{
+    <li>@review</li>
+}    
+
+</ul>
